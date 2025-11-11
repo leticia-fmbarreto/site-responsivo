@@ -150,8 +150,8 @@ table th {
 /* ================================================= */
 /* MEDIA QUERY - Ajuste Responsivo da Tabela */
 /* ================================================= */
-@media (max-width: 768px) {
-    /* Manter a formatação de "mobile-first" que já estava aplicada, mas adaptada para as duas tabelas */
+ /*@media (max-width: 768px) {
+    Manter a formatação de "mobile-first" que já estava aplicada, mas adaptada para as duas tabelas */
     .secao-padrao table {
         margin-bottom: 2rem;
         
@@ -160,8 +160,8 @@ table th {
     /* Mapeamento de conteúdo para os headers simulados em mobile (repetido para clareza)
     .secao-padrao table td:nth-of-type(1):before { content: "Altura x Largura"; }
     .secao-padrao table td:nth-of-type(2):before { content: "Peso"; }
-    .secao-padrao table td:nth-of-type(3):before { content: "Valor"; } */
-}
+    .secao-padrao table td:nth-of-type(3):before { content: "Valor"; }
+} */
 
 /* Seção Destaque (Galeria) */
 .galeria {
@@ -257,7 +257,7 @@ footer a {
 
     /* Ajuste na tabela para telas pequenas */
     table, thead, tbody, th, td, tr {
-        display: -moz-grid-group;
+        display: flexbox;
     }
     
     thead tr {
@@ -287,10 +287,10 @@ footer a {
         color: #e65c7a;
     }
 
-    /* Mapeamento de conteúdo para os headers simulados 
+    /* Mapeamento de conteúdo para os headers simulados */
     td:nth-of-type(1):before { content: "Altura x Largura"; }
     td:nth-of-type(2):before { content: "Peso"; }
-    td:nth-of-type(3):before { content: "Valor"; }*/
+    td:nth-of-type(3):before { content: "Valor"; }
 }
 
 /* Estilos para o Rodapé (Formulário) */
