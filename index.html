@@ -17,37 +17,84 @@
     <main>
         <section id="valores" class="section">
             <h2>💰 Tabela de Valores (A Partir de...)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tamanho/Tipo</th>
-                        <th>Serve (fatias)</th>
-                        <th>Valor (R$)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bolo Simples</td>
-                        <td>10-15</td>
-                        <td>A partir de 60,00</td>
-                    </tr>
-                    <tr>
-                        <td>Bolo Decorado P</td>
-                        <td>15-20</td>
-                        <td>A partir de 120,00</td>
-                    </tr>
-                    <tr>
-                        <td>Bolo Decorado M</td>
-                        <td>25-30</td>
-                        <td>A partir de 180,00</td>
-                    </tr>
-                    <tr>
-                        <td>Bolo Decorado G</td>
-                        <td>40-50</td>
-                        <td>A partir de 250,00</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <div class="table-container">
+                <div class="table-card">
+                    <h3>Bolos Redondos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tamanho (cm)</th>
+                                <th>Valor (R$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20 x 10</td>
+                                <td>120,00</td>
+                            </tr>
+                            <tr>
+                                <td>25 x 10</td>
+                                <td>160,00</td>
+                            </tr>
+                            <tr>
+                                <td>30 x 10</td>
+                                <td>180,00</td>
+                            </tr>
+                            <tr>
+                                <td>35 x 10</td>
+                                <td>250,00</td>
+                            </tr>
+                            <tr>
+                                <td>Dois Andares</td>
+                                <td>300,00</td>
+                            </tr>
+                            <tr>
+                                <td>Três Andares</td>
+                                <td>350,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3>Bolos Retangulares</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tamanho (cm)</th>
+                                <th>Valor (R$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20 x 10</td>
+                                <td>160,00</td>
+                            </tr>
+                            <tr>
+                                <td>25 x 10</td>
+                                <td>180,00</td>
+                            </tr>
+                            <tr>
+                                <td>30 x 10</td>
+                                <td>200,00</td>
+                            </tr>
+                            <tr>
+                                <td>35 x 10</td>
+                                <td>250,00</td>
+                            </tr>
+                            <tr>
+                                <td>Dois Andares</td>
+                                <td>300,00</td>
+                            </tr>
+                            <tr>
+                                <td>40 x 30 (Ex.)</td>
+                                <td>350,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <p class="note">*Valores base. O preço final varia conforme a decoração e complexidade.</p>
         </section>
 
@@ -57,20 +104,21 @@
                 <div class="list-column">
                     <h3>Massas Especiais</h3>
                     <ul>
-                        <li>Baunilha (tradicional)</li>
-                        <li>Chocolate 50% Cacau</li>
-                        <li>Red Velvet</li>
-                        <li>Massa de Nozes</li>
+                        <li>Branca (tradicional)</li>
+                        <li>Chocolate</li>
                     </ul>
                 </div>
                 <div class="list-column">
                     <h3>Recheios Deliciosos</h3>
                     <ul>
-                        <li>Brigadeiro Gourmet</li>
-                        <li>Ninho com Morango</li>
-                        <li>Doce de Leite com Ameixa</li>
-                        <li>Mousse de Maracujá</li>
-                        <li>Creme Belga com Pêssego</li>
+                        <li>Brigadeiro Tradicional</li>
+                        <li>Brigadeiro de Branco</li>
+                        <li>Brigadeiro de Amendoim</li>
+                        <li>Doce de Leite</li>
+                        <li>Três Leites</li>
+                        <li>Creme de Leite Ninho</li>
+                        <li>Oreo</li>
+                        <li>Creme Belga</li>
                     </ul>
                 </div>
             </div>
@@ -79,30 +127,42 @@
         <section id="bolos" class="section">
             <h2>✨ Bolos Decorados</h2>
             <div class="galeria">
-                <div class="bolo-card"><span class="placeholder-img">Bolo 1 (Aniversário)</span></div>
-                <div class="bolo-card"><span class="placeholder-img">Bolo 2 (Casamento)</span></div>
-                <div class="bolo-card"><span class="placeholder-img">Bolo 3 (Infantil)</span></div>
-                <div class="bolo-card"><span class="placeholder-img">Bolo 4 (Temático)</span></div>
+                <div class="bolo-card">
+                    <img src="imagens/bolo-aniversario-rosas.jpg.jpg" alt="Bolo de Aniversário com Rosas Cor-de-Rosa">
+                    <p class="image-caption">Bolo de Aniversário</p>
+                </div>
+                <div class="bolo-card">
+                    <img src="imagens/bolo-casamento-azul.jpg.jpg" alt="Bolo de Casamento de Três Andares em Degradê Azul">
+                    <p class="image-caption">Bolo de Casamento</p>
+                </div>
+                <div class="bolo-card">
+                    <img src="imagens/bolo-infantil-princesa-helena.jpg.jpg" alt="Bolo Infantil de Princesa com nome Helena">
+                    <p class="image-caption">Bolo Infantil</p>
+                </div>
+                <div class="bolo-card">
+                    <img src="imagens/bolo-tematico-fazendinha-arthur.jpg.jpg" alt="Bolo Temático Fazendinha do Arthur">
+                    <p class="image-caption">Bolo Temático</p>
+                </div>
             </div>
         </section>
 
         <section id="sobre" class="section dark-bg">
-            <h2>💖 Sobre Nilma Moura - A Empreendedora</h2>
+            <h2>Sobre A Empreendedora</h2>
             <div class="bio-content">
                 <p>
-                    Olá! Sou a **Nilma Moura**, e a "Delícias da Nyh" nasceu da paixão por transformar ingredientes em momentos inesquecíveis. Cada bolo é feito artesanalmente, com a dedicação e o carinho que a sua celebração merece.
+                    Olá! Sou a Nilma Moura, e a "Delícias da Nyh" nasceu da paixão por transformar ingredientes em momentos inesquecíveis. Cada bolo é feito artesanalmente, com a dedicação e o carinho que a sua celebração merece.
                 </p>
                 <p>
                     Fazer bolos é mais que um trabalho, é uma forma de compartilhar alegria. Conte comigo para adoçar a sua festa!
                 </p>
                 <p>
-                    **Contato:** <a href="tel:+5574988391514" class="contact-link">(74) 98839-1514</a>
+                    Contato:<a href="tel:+5574988391514" class="contact-link">(74) 98839-1514</a>
                 </p>
             </div>
         </section>
         
         <section id="encomenda" class="section form-section">
-            <h2>📝 Faça sua Encomenda</h2>
+            <h2>Faça sua Encomenda</h2>
             <form id="whatsapp-form">
                 <div class="form-group">
                     <label for="nome">Seu Nome Completo:</label>
@@ -117,7 +177,7 @@
                     <input type="date" id="data" name="data" required>
                 </div>
                 <div class="form-group">
-                    <label for="detalhes">Detalhes do Pedido (Sabor, Tamanho, Tema, Quantidade de Pessoas):</label>
+                    <label for="detalhes">Detalhes do Pedido (Sabor, Tamanho, Tema):</label>
                     <textarea id="detalhes" name="detalhes" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Enviar Pedido via WhatsApp</button>
