@@ -1,71 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Lógica do Menu Responsivo
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('whatsapp-form');
+    // Número de WhatsApp da Nilma (Sem formatação, apenas dígitos)
+    const numeroWhatsApp = '5574988391514'; // +55 (código do Brasil) 74 (DDD) 988391514 (Número)
 
-    // Abre/fecha o menu ao clicar no ícone
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // 1. Coleta dos dados do formulário
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('telefone').value;
+        const data = document.getElementById('data').value;
+        const detalhes = document.getElementById('detalhes').value;
+
+        // 2. Formatação da mensagem
+        const mensagem = 
+            `Olá, Delícias da Nyh! Gostaria de fazer uma encomenda. 🎂%0A%0A` +
+            `*Nome do Cliente:* ${nome}%0A` +
+            `*Telefone:* ${telefone}%0A` +
+            `*Data Prevista:* ${data}%0A%0A` +
+            `*Detalhes do Pedido:*%0A` +
+            `${detalhes}%0A%0A` +
+            `*Aguardando a confirmação!*`;
+
+        // 3. Criação do link do WhatsApp
+        // O `encodeURIComponent` garante que o texto especial (espaços, quebras de linha) seja formatado corretamente.
+        const whatsappLink = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+
+        // 4. Redirecionamento
+        window.open(whatsappLink, '_blank');
     });
-
-    // Fecha o menu ao clicar em um link (para navegação interna em mobile)
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-            }
-        });
-    });
-
-    // 2. Lógica do Formulário com Validação
-    const formEncomenda = document.getElementById('form-encomenda');
-
-    formEncomenda.addEventListener('submit', function(event) {
-        // Impede o envio padrão do formulário (que recarregaria a página)
-        event.preventDefault(); 
-
-        // Executa a função de validação
-        if (validarFormulario()) {
-            // Se a validação for TRUE (passou):
-            
-            // SIMULAÇÃO: Exibe uma mensagem de sucesso
-            alert('✅ Pedido de orçamento enviado com sucesso! Agradecemos o contato. Entraremos em contato por e-mail ou WhatsApp.');
-
-            // Opcional: Limpa o formulário após o envio
-            formEncomenda.reset(); 
-            
-            // Em um site real, a linha de código para enviar os dados para o backend (servidor) viria aqui.
-        }
-    });
-
-    /**
-     * Função para validar os campos do formulário antes do envio.
-     * @returns {boolean} Retorna true se a validação for bem-sucedida, false caso contrário.
-     */
-    function validarFormulario() {
-        const telefoneInput = document.getElementById('telefone');
-        const telefone = telefoneInput.value.trim();
-
-        // 2.1. Validação de Telefone (Obrigatório e Formato Básico)
-        if (telefone === "") {
-            alert('Por favor, preencha o campo Telefone (WhatsApp).');
-            telefoneInput.focus();
-            return false;
-        }
-
-        // 2.2. Validação de Formato Básico (Ex: 8 a 15 dígitos)
-        // Esta é uma REGEX (Expressão Regular) simples para o Brasil:
-        // Verifica se há pelo menos 8 a 15 números, permitindo espaços, hífens e parênteses.
-        const regexTelefone = /^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/; 
-
-        if (!regexTelefone.test(telefone)) {
-            alert('Por favor, insira um número de telefone válido (ex: (XX) XXXXX-XXXX).');
-            telefoneInput.focus();
-            return false;
-        }
-        
-        // Se todas as validações passarem
-        return true;
-    }
 });

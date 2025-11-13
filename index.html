@@ -3,245 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encomendas de Bolos | Delícias da Nyh</title>
+    <title>Delícias da Nyh - Bolos Decorados</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Delícias da Nyh</h1>
-            <nav id="nav-menu">
-                <a href="#cardapio">Cardápio</a>
-                <a href="#precos">Preços</a>
-                <a href="#destaque">Em Destaque</a>
-                <a href="#contato" class="btn-encomenda">Encomende Agora!</a>
-            </nav>
-            <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
-        </div>
+    <header class="hero">
+        <h1 class="title">Delícias da Nyh</h1>
+        <p class="subtitle">Bolos decorados, feitos com muito carinho para deixar sua festa ainda mais especial.</p>
     </header>
 
     <main>
-
-       <section id="cardapio" class="secao-padrao">
-    <div class="container">
-        <h2>Cardápio: Massas e Recheios</h2>
-        
-        <div class="cardapio-subsecao">
-            <h3>Massas 🥖</h3>
-            <div class="lista-sabores">
-                <article class="sabor">
-                    <h4>Branca (Tradicional)</h4>
-                    <p>Massa leve e fofa, perfeita para qualquer recheio.</p>
-                </article>
-                <article class="sabor">
-                    <h4>Chocolate</h4>
-                    <p>Massa escura e úmida, com sabor intenso de cacau.</p>
-                </article>
-            </div>
-        </div>
-        
-        <hr class="divisor-cardapio">
-
-        <div class="cardapio-subsecao">
-            <h3>Recheios 😋</h3>
-            <div class="lista-sabores">
-                <article class="sabor">
-                    <h4>Brigadeiro Tradicional</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Brigadeiro Branco</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Brigadeiro de Amendoim</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Doce de Leite</h4>
-                </article>
-                
-                <article class="sabor">
-                    <h4>Três Leites</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Creme de Leite Ninho</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Oreo</h4>
-                </article>
-                <article class="sabor">
-                    <h4>Creme Belga</h4>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
-        
-
-<section id="precos" class="secao-padrao bg-claro">
-    <div class="container">
-        <h2>Tabela Valores</h2>
-        
-        <h3>Bolos Redondos</h3>
-        <table class="tabela-redonda">
-            <thead>
-                <tr>
-                    <th> Altura x Largura</th>
-                    <th>Peso</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>20 x 10 cm</td>
-                    <td>2,5 kg</td>
-                    <td>R$ 120,00</td>
-                </tr>
-                <tr>
-                    <td>25 x 10 cm</td>
-                    <td>4,0 kg</td>
-                    <td>R$ 160,00</td>
-                </tr>
-                <tr>
-                    <td>30 x 10 cm</td>
-                    <td>5,5 kg</td>
-                    <td>R$ 180,00</td>
-                </tr>
-                <tr>
-                    <td>35 x 10 cm</td>
-                    <td>7,0 kg</td>
-                    <td>R$ 250,00</td>
-                </tr>
-                <tr>
-                    <td>40 x 10 cm</td>
-                    <td>10,0 kg</td>
-                    <td>R$ 300,00</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-            <h3>Bolos Retangulares</h3>
-          <table class="tabela-retangular">
+        <section id="valores" class="section">
+            <h2>💰 Tabela de Valores (A Partir de...)</h2>
+            <table>
                 <thead>
-                <tr>
-                    <th>Altura x Largura</th>
-                    <th>Peso</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>30 x 20 cm</td>
-                    <td>4,0 kg</td>
-                    <td>R$ 160,00</td>
-                </tr>
-                <tr>
-                    <td>33 x 23</td>
-                    <td>5,5 kg</td>
-                    <td>R$ 180,00</td>
-                </tr>
-                <tr>
-                    <td>37 x 27 cm</td>
-                    <td>6,0 kg</td>
-                    <td>R$ 200,00</td>
-                </tr>
-                <tr>
-                    <td>40 x 30 cm</td>
-                    <td>7,0 kg</td>
-                    <td>R$ 250,00</td>
-                </tr>
-                <tr>
-                    <td>45 x 32 cm</td>
-                    <td>10,0 kg</td>
-                    <td>R$ 300,00</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
+                    <tr>
+                        <th>Tamanho/Tipo</th>
+                        <th>Serve (fatias)</th>
+                        <th>Valor (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bolo Simples</td>
+                        <td>10-15</td>
+                        <td>A partir de 60,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bolo Decorado P</td>
+                        <td>15-20</td>
+                        <td>A partir de 120,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bolo Decorado M</td>
+                        <td>25-30</td>
+                        <td>A partir de 180,00</td>
+                    </tr>
+                    <tr>
+                        <td>Bolo Decorado G</td>
+                        <td>40-50</td>
+                        <td>A partir de 250,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note">*Valores base. O preço final varia conforme a decoração e complexidade.</p>
+        </section>
 
-        
-      
-
-        <p class="nota-preco">*Adicionais de frutas e texturas, valores a parte!</p>
-    </div>
-</section>
-
-        <section id="destaque" class="secao-padrao">
-            <div class="container">
-                <h2>Bolos em Destaque ✨</h2>
-                <div class="galeria">
-                    <div class="bolo-item">
-                        <p class="placeholder-img">Bolo de Aniversário</p>
-                        <h3>Festa Tropical</h3>
-                        <p>Decoração colorida com frutas e flores comestíveis.</p>
-                    </div>
-                    <div class="bolo-item">
-                        <p class="placeholder-img">Bolo de Casamento</p>
-                        <h3>Clássico de Andares</h3>
-                        <p>Elegância em pasta americana e flores de açúcar brancas.</p>
-                    </div>
-                    <div class="bolo-item">
-                        <p class="placeholder-img">Bolo Temático</p>
-                        <h3>Unicórnio Mágico</h3>
-                        <p>Design lúdico e muito brilho para festas infantis.</p>
-                    </div><div class="bolo-item">
-                        <p class="placeholder-img">Bolo Temático</p>
-                        <h3>Unicórnio Mágico</h3>
-                        <p>Design lúdico e muito brilho para festas infantis.</p>
-                    </div>
+        <section id="sabores" class="section dark-bg">
+            <h2>🍰 Nossas Massas e Recheios</h2>
+            <div class="sabores-container">
+                <div class="list-column">
+                    <h3>Massas Especiais</h3>
+                    <ul>
+                        <li>Baunilha (tradicional)</li>
+                        <li>Chocolate 50% Cacau</li>
+                        <li>Red Velvet</li>
+                        <li>Massa de Nozes</li>
+                    </ul>
+                </div>
+                <div class="list-column">
+                    <h3>Recheios Deliciosos</h3>
+                    <ul>
+                        <li>Brigadeiro Gourmet</li>
+                        <li>Ninho com Morango</li>
+                        <li>Doce de Leite com Ameixa</li>
+                        <li>Mousse de Maracujá</li>
+                        <li>Creme Belga com Pêssego</li>
+                    </ul>
                 </div>
             </div>
         </section>
+
+        <section id="bolos" class="section">
+            <h2>✨ Bolos Decorados</h2>
+            <div class="galeria">
+                <div class="bolo-card"><span class="placeholder-img">Bolo 1 (Aniversário)</span></div>
+                <div class="bolo-card"><span class="placeholder-img">Bolo 2 (Casamento)</span></div>
+                <div class="bolo-card"><span class="placeholder-img">Bolo 3 (Infantil)</span></div>
+                <div class="bolo-card"><span class="placeholder-img">Bolo 4 (Temático)</span></div>
+            </div>
+        </section>
+
+        <section id="sobre" class="section dark-bg">
+            <h2>💖 Sobre Nilma Moura - A Empreendedora</h2>
+            <div class="bio-content">
+                <p>
+                    Olá! Sou a **Nilma Moura**, e a "Delícias da Nyh" nasceu da paixão por transformar ingredientes em momentos inesquecíveis. Cada bolo é feito artesanalmente, com a dedicação e o carinho que a sua celebração merece.
+                </p>
+                <p>
+                    Fazer bolos é mais que um trabalho, é uma forma de compartilhar alegria. Conte comigo para adoçar a sua festa!
+                </p>
+                <p>
+                    **Contato:** <a href="tel:+5574988391514" class="contact-link">(74) 98839-1514</a>
+                </p>
+            </div>
+        </section>
         
+        <section id="encomenda" class="section form-section">
+            <h2>📝 Faça sua Encomenda</h2>
+            <form id="whatsapp-form">
+                <div class="form-group">
+                    <label for="nome">Seu Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Seu Telefone (WhatsApp):</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="data">Data do Evento (prevista):</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="detalhes">Detalhes do Pedido (Sabor, Tamanho, Tema, Quantidade de Pessoas):</label>
+                    <textarea id="detalhes" name="detalhes" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Pedido via WhatsApp</button>
+            </form>
+            <p class="form-note">Você será redirecionado(a) para o WhatsApp da Nyh com as informações do seu pedido.</p>
+        </section>
     </main>
-<footer>
-    <div class="container" id="contato">
-        <h2>Faça Sua Encomenda! 📝</h2>
-        <p>Preencha os campos abaixo para solicitar um orçamento. Entraremos em contato o mais breve possível.</p>
 
-        <form id="form-encomenda">
-            <div class="form-grupo">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-
-            <div class="form-grupo">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-grupo">
-                <label for="telefone">Telefone (WhatsApp):</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
-            </div>
-
-            <hr>
-            
-            <div class="form-grupo">
-                <label for="sabor">Sabor Principal (ex: Chocolate, Red Velvet):</label>
-                <input type="text" id="sabor" name="sabor" required>
-            </div>
-
-            <div class="form-grupo">
-                <label for="tamanho">Tamanho / Porções (ex: Médio / 20 fatias):</label>
-                <input type="text" id="tamanho" name="tamanho" required>
-            </div>
-
-            <div class="form-grupo">
-                <label for="data">Data de Entrega Desejada:</label>
-                <input type="date" id="data" name="data" required>
-            </div>
-
-            <div class="form-grupo">
-                <label for="detalhes">Detalhes/Decoração:</label>
-                <textarea id="detalhes" name="detalhes" rows="4" placeholder="Detalhe o tema, cores ou qualquer pedido especial..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">Enviar Pedido de Orçamento</button>
-        </form>
-
-        <p class="nota-rodape">&copy; 2025 Doce Sabor. Responderemos em até 24h.</p>
-    </div>
-</footer>
+    <footer class="footer-fixed">
+        <span>Delícias da Nyh, bolos decorados, fazemos entrega ❤️</span>
+    </footer>
 
     <script src="script.js"></script>
 </body>
